@@ -10,6 +10,7 @@ data: {confirm: "您確定要清空整個購物車嗎？"})%>
         <th colspan="2">商品資訊</th>
         <th>單價</th>
         <th>數量</th>
+        <th>操作選項</th>
       </tr>
     </thead>
     <tbody>
@@ -33,6 +34,11 @@ data: {confirm: "您確定要清空整個購物車嗎？"})%>
       </td>
       <td>
         <%= cart_item.quantity %>
+        </td>
+        <td>
+        <%= link_to cart_item_path(cart_item.product_id), method: :delete do %>
+        <i class="fa fa-trash"></i>
+        <% end %>
         </td>
       </tr>
       <% end %>
