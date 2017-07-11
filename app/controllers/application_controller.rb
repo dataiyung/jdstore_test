@@ -9,7 +9,7 @@ end
 
 helper_method :current_cart
 
-def currrent_cart
+def current_cart
   @current_cart ||= find_cart
 end
 
