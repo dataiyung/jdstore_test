@@ -3,7 +3,7 @@
   <head>
     <title>Jdstore</title>
     <%= csrf_meta_tags %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -14,6 +14,8 @@
            <%= render "common/flashes" %>
            <%= yield %>
          </div>
+            <%= link_to "中文版", :controller => controller_name, :action => action_name, :locale => "zh-CN" %>
+            <%= link_to "English", :controller => controller_name, :action => action_name, :locale => "en" %>
              <%= render "common/footer" %>
        </body>
        </html>
